@@ -47,7 +47,8 @@ public class MakeFind implements ActionListener {
             return CombinationUtils.produceOutputFrequencyList(Double.parseDouble(ofline[0]), Double.parseDouble(ofline[1]), Double.parseDouble(ofline[2]));
         }).forEach(outputDeltaFreqs::addAll);
         Long allCombinationNumber = CombinationUtils.getCombinationNumber(outputDeltaFreqs.size(), orderNumber);
-        CombinationEntitySupplier supplier = new CombinationEntitySupplier(outputDeltaFreqs, orders);
+        this.progressLabel.setText(0+"/"+allCombinationNumber);
+//        CombinationEntitySupplier supplier = new CombinationEntitySupplier(outputDeltaFreqs, orders);
 //        Map<Double, String> result = ResultTester.test(supplier.get(), inputFreqs);
 //        ResultSaver.accept(result);
 
