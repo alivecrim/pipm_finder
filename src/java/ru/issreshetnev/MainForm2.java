@@ -8,8 +8,10 @@ public class MainForm2 extends JFrame {
     private JTextArea inputFreq;
     private JTextArea outputFreq;
     private JComboBox order;
-    private JLabel progressLabel;
     private JButton goButton;
+    private JProgressBar progress;
+    private JLabel timeElapsed;
+    private JButton stopButton;
 
     public MainForm2() throws HeadlessException {
         int WIDTH_ = 1200;
@@ -19,8 +21,12 @@ public class MainForm2 extends JFrame {
         this.setLocationRelativeTo(null);
     }
 
-    public JPanel getMainPanel() {
-        return mainPanel;
+    public JProgressBar getProgress() {
+        return progress;
+    }
+
+    public JLabel getTimeElapsed() {
+        return timeElapsed;
     }
 
     public JTextArea getInputFreq() {
@@ -35,11 +41,11 @@ public class MainForm2 extends JFrame {
         return order;
     }
 
-    public JLabel getProgressLabel() {
-        return progressLabel;
-    }
-
     public JButton getGoButton() {
         return goButton;
+    }
+
+    public JButton getStopButton() {
+        return this.stopButton;
     }
 }

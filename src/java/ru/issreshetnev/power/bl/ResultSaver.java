@@ -8,22 +8,23 @@ import java.util.regex.Pattern;
 
 public class ResultSaver {
     public static void accept(Map<Double, String> doubleStringMap) {
-        try {
-            PrintWriter printWriter = new PrintWriter("result.csv");
-            printWriter.println("#COMBINATION;FREQ1;FREQ2;ORDER1;ORDER2;SIGN");
-            doubleStringMap.entrySet().stream().forEach(e -> {
-                Equation ex = eqParse(e.getValue());
-                printWriter.println(e.getKey() + ";" + ex.getF1() + ";" + ex.getF2() + ";" + ex.getO1() + ";" + ex.getO2() + ";" + (ex.isSign() ? "-" : "+"));
-            });
-            printWriter.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        if (doubleStringMap.size()>0) {
+            try {
+                PrintWriter printWriter = new PrintWriter("result.csv");
+                printWriter.println("#COMBINATION;FREQ1;FREQ2;ORDER1;ORDER2;SIGN");
+                doubleStringMap.entrySet().stream().forEach(e -> {
+                    Equation ex = eqParse(e.getValue());
+                    printWriter.println(e.getKey() + ";" + ex.getF1() + ";" + ex.getF2() + ";" + ex.getO1() + ";" + ex.getO2() + ";" + (ex.isSign() ? "-" : "+"));
+                });
+                printWriter.close();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
         }
-        System.out.println(doubleStringMap);
     }
 
     public static Equation eqParse(String value) {
-        Pattern pattern = Pattern.compile("([1234])\\*(\\d\\.\\d+E\\d+)([\\+-])([1234])\\*(\\d\\.\\d+E\\d+)");
+        Pattern pattern = Pattern.compile("([1234567890]+)\\*(\\d+\\.\\d+[E]?[\\d]?[\\d]?[\\d]?)([\\+-])([1234567890]+)\\*(\\d+\\.\\d+[E]?[\\d]?[\\d]?[\\d]?)");
         Matcher matcher = pattern.matcher(value);
         matcher.find();
         return new Equation(Integer.parseInt(matcher.group(1)),
