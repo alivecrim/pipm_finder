@@ -1,6 +1,5 @@
 package ru.issreshetnev.power;
 
-import ru.issreshetnev.MainForm2;
 import ru.issreshetnev.power.bl.CombinationUtils;
 import ru.issreshetnev.power.bl.InputFreqRange;
 import ru.issreshetnev.power.bl.InputFreqRangePack;

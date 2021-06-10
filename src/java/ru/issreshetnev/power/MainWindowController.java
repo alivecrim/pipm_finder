@@ -1,7 +1,5 @@
 package ru.issreshetnev.power;
 
-import ru.issreshetnev.MainForm2;
-
 import javax.swing.*;
 
 public class MainWindowController {

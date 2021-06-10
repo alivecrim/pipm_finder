@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="pipm_finder:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/pipm_finder_jar</output-path>
+    <root id="archive" name="pipm_finder.jar">
+      <element id="module-output" name="pipm_finder" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

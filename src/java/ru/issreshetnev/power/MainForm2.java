@@ -1,4 +1,4 @@
-package ru.issreshetnev;
+package ru.issreshetnev.power;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,6 +18,7 @@ public class MainForm2 extends JFrame {
         int HEIGHT_ = 600;
         setSize(WIDTH_, HEIGHT_);
         setContentPane(mainPanel);
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
     }
 
