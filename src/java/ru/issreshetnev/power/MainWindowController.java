@@ -10,7 +10,8 @@ public class MainWindowController {
     JTextArea inputFreqs;
     JTextArea outputFreqs;
     JComboBox order;
-    JLabel progressLabel;
+    JProgressBar progress;
+        JLabel timeElapsed;
 
     public MainWindowController() {
         this.mainForm = new MainForm2();
@@ -18,12 +19,15 @@ public class MainWindowController {
         this.outputFreqs = this.mainForm.getOutputFreq();
         this.order = this.mainForm.getOrder();
         this.startButton = this.mainForm.getGoButton();
-        progressLabel = this.mainForm.getProgressLabel();
+        timeElapsed = this.mainForm.getTimeElapsed();
+        progress = this.mainForm.getProgress();
         initListeners();
     }
 
     private void initListeners() {
-        startButton.addActionListener(new MakeFind(inputFreqs, outputFreqs, order, progressLabel));
+        MakeFind l = new MakeFind(this.mainForm);
+        startButton.addActionListener(l);
+        this.mainForm.getStopButton().addActionListener(new StopFind(l));
     }
 
     public void show() {

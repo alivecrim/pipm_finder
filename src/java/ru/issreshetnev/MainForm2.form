@@ -2,37 +2,15 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="ru.issreshetnev.MainForm2">
   <grid id="27dc6" binding="mainPanel" layout-manager="GridBagLayout">
     <constraints>
-      <xy x="20" y="30" width="1008" height="614"/>
+      <xy x="20" y="30" width="1008" height="638"/>
     </constraints>
     <properties/>
     <border type="none"/>
     <children>
-      <component id="ab044" class="javax.swing.JTextArea" binding="inputFreq">
-        <constraints>
-          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="50"/>
-          </grid>
-          <gridbag weightx="1.0" weighty="1.0"/>
-        </constraints>
-        <properties>
-          <text value="6000 18"/>
-        </properties>
-      </component>
-      <component id="39d06" class="javax.swing.JTextArea" binding="outputFreq">
-        <constraints>
-          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="50"/>
-          </grid>
-          <gridbag weightx="1.0" weighty="1.0"/>
-        </constraints>
-        <properties>
-          <text value="20200 60 0.1"/>
-        </properties>
-      </component>
       <component id="75ccc" class="javax.swing.JComboBox" binding="order">
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
           <model>
@@ -59,58 +37,91 @@
           </model>
         </properties>
       </component>
-      <component id="1296c" class="javax.swing.JLabel">
+      <component id="ab02f" class="javax.swing.JProgressBar" binding="progress">
         <constraints>
-          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
+          <grid row="5" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="0.1"/>
         </constraints>
         <properties>
-          <text value="Входные частоты"/>
+          <indeterminate value="false"/>
+          <stringPainted value="true"/>
+        </properties>
+      </component>
+      <component id="4a314" class="javax.swing.JButton" binding="goButton">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="Поехали искать частоты"/>
         </properties>
       </component>
       <component id="8be27" class="javax.swing.JLabel">
         <constraints>
-          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
           <text value="Выходные частоты"/>
         </properties>
       </component>
-      <component id="de93c" class="javax.swing.JLabel" binding="progressLabel">
+      <component id="1296c" class="javax.swing.JLabel">
         <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="1.0" weighty="0.0"/>
+          <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="0/0"/>
+          <text value="Входные частоты"/>
         </properties>
       </component>
-      <component id="b373c" class="javax.swing.JLabel">
+      <component id="ab044" class="javax.swing.JTextArea" binding="inputFreq">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="1.0"/>
         </constraints>
         <properties>
-          <text value="Прогресс: "/>
+          <text value="6000 18"/>
         </properties>
       </component>
       <component id="88d39" class="javax.swing.JLabel">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
           <text value="Порядок частоты для поиска"/>
         </properties>
       </component>
-      <component id="4a314" class="javax.swing.JButton" binding="goButton">
+      <component id="39d06" class="javax.swing.JTextArea" binding="outputFreq">
         <constraints>
-          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="1.0"/>
         </constraints>
         <properties>
-          <text value="Поехали искать частоты"/>
+          <text value="20200 60 0.1"/>
+        </properties>
+      </component>
+      <component id="85c4" class="javax.swing.JLabel" binding="timeElapsed">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="Прошло: нисколько секунд"/>
+        </properties>
+      </component>
+      <component id="7e6d4" class="javax.swing.JButton" binding="stopButton">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <enabled value="false"/>
+          <text value="Тормози!"/>
         </properties>
       </component>
     </children>
